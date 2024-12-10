@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b;
+    char operation;
+
+    cout << "Введите два числа: ";
+    cin >> a >> b;
+
+    cout << "Введите операцию (+, -, *, /): ";
+    cin >> operation;
+
+    if (operation == '+') {
+        cout << "Результат: " << a + b << endl;
+    } else if (operation == '-') {
+        cout << "Результат: " << a - b << endl;
+    } else if (operation == '*') {
+        cout << "Результат: " << a * b << endl;
+    } else if (operation == '/') {
+        if (b != 0) {
+            cout << "Результат: " << static_cast<float>(a) / b << endl;
+        } else {
+            cout << "Ошибка: Деление на ноль!" << endl;
+        }
+    } else {
+        cout << "Ошибка: Неверная операция!" << endl;
+    }
+
+    return 0;
+}
